@@ -32,7 +32,7 @@
     "check:exports:web": "node ./scripts/check-package-exports-web-alignment.mjs",
     "check:unused": "knip --dependencies --workspace .",
     "check:tamagui": "./node_modules/.bin/tamagui check",
-    "check": "bun run check:deps && bun run check:unused && bun run check:tamagui && bun run check:references",
+    "check": "./scripts/check-parallel.sh",
     "ci": "bun install && bun run check && bun run lint && bun run typecheck && bun run build && bun run test",
     "clean:build": "./scripts/run.sh clean:build",
     "clean:ts": "tsc -b --clean tsconfig.build.json",

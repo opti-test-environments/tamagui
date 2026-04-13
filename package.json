@@ -68,7 +68,7 @@
     "lighthouse": "npx lighthouse http://localhost:3000 --view --chrome-flags='--headless' --throttling.cpuSlowdownMultiplier=16 --output-path=/tmp/report.html",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
-    "lint": "oxfmt --check && oxlint",
+    "lint": "./scripts/lint-parallel.sh",
     "lint:fix": "oxfmt && oxlint --fix --fix-suggestions",
     "llink": "lllink ~/one",
     "next-site": "./scripts/bun-run.sh @tamagui/next-site dev",
